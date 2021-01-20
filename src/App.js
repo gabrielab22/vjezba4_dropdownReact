@@ -23,6 +23,7 @@ const App = () => {
 
   const MainDropdownItems = () => (
     <DropdownButton title={catType.length ? catType : "Cars"}>
+
       {Object.keys(cars).map((cat, index) => (
         <Dropdown.Item key={index} onClick={() => setCatType(cat)}>
           {cat}
@@ -41,6 +42,8 @@ const App = () => {
           {cat}
         </Dropdown.Item>
       ))}
+
+
     </DropdownButton>
   );
 
@@ -51,6 +54,7 @@ const App = () => {
           <code>{`${catType.length ? catType + "/" : ""}${subCatType.length ? subCatType + "/" : ""
             }`}</code>
           <MainDropdownItems />
+
           <SubDropdownItems />
         </div>
       </header>
